@@ -1,0 +1,403 @@
+/* ---------- RESET ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- BASE ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- BODY ---------- */
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #0e0e0e;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background:
+        linear-gradient(rgba(14, 14, 14, 0.3), rgba(14, 14, 14, 0.9)),
+        url("./img/bg.jpg") center/cover no-repeat;
+    opacity: 0.45;
+    z-index: -1;
+}
+
+/* ---------- TIPOGRAFIA ---------- */
+h1, h2, h3 {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 2.5vw + 1rem, 3.2rem);
+    color: #fff;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem);
+    color: #CD201F;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: clamp(1.1rem, 1.5vw + 1rem, 1.6rem);
+    color: #CD201F;
+}
+
+p {
+    max-width: 65ch;
+    margin: 0 auto 1rem;
+    padding: 0 .5rem;
+}
+
+a {
+    color: #CD201F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* ---------- BOTÃO GLOBAL ---------- */
+a {
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem 0;
+    padding: 1.25rem 2rem;
+    font: 600 1.25rem/1 'Fredoka', sans-serif;
+    text-align: center;
+    border: none;
+    border-radius: 2.5rem;
+    background: rgba(205, 32, 31, 0.85);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #CD201F;
+    transform: translateY(-4px);
+    box-shadow:
+        0 12px 32px rgba(205, 32, 31, 0.5),
+        inset 0 2px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* ---------- HEADER ---------- */
+header {
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: solid 2px #CD201F;
+    background: rgba(24, 24, 24, 0.5);
+    backdrop-filter: blur(6px);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+nav a {
+    flex: 1 1 120px;
+    max-width: 160px;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    background: #CD201F;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: rgba(0,0,0,0.2) 0px 3px 5px -1px,rgba(0,0,0,0.14) 0px 6px 10px 0px;
+}
+
+/* ---------- MAIN ---------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background: #181818;
+    border: 1px solid #2c2c2c;
+    margin: 1.5rem 0;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+/* ---------- SOBRE ---------- */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    min-height: 320px;
+    text-align: center;
+}
+
+
+
+.about-content p {
+    text-align: left;
+}
+
+/* ---------- FOTO DE PERFIL ---------- */
+
+.photo-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #CD201F;
+}
+
+/* ---------- BOTÃO MUDAR FOTO DE PERFIL ---------- */
+
+.about__badge {
+  position: absolute;
+  bottom: -10px;
+  right: 110px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #CD201F;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50%;
+  border: 2px solid #0e0e0e;
+}
+
+.badge__image {
+  width: 85%;
+  height: auto;
+  object-fit: contain;
+}
+
+#refresh__btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: transform .25s;
+}
+#refresh__btn:hover {
+  transform: rotate(360deg);
+}
+
+#refresh__btn:active {
+    transform: scale(0.80);
+}
+
+/* ---------- TOAST ---------- */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(150%);
+  opacity: 0;                       
+  pointer-events: none;             
+  background: #CD201F;
+  color: #fff;
+  padding: .75rem 1.5rem;
+  border-radius: 2rem;
+  font: 600 1rem/1 'Fredoka', sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.35);
+  z-index: 9999;
+  transition: transform .4s ease, opacity .4s ease;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- TABELA ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th,td {
+    padding: .75rem;
+    text-align: left;
+}
+
+th {
+    background: #CD201F;
+    color: #fff;
+}
+
+td {
+    background: #202020;
+    border-top: 1px solid #2c2c2c;
+}
+
+.table-wrapper {
+  border-radius: .75rem;
+  overflow: hidden;
+  border: 1px solid #2c2c2c;
+  padding: 0.90rem;
+}
+
+/* ---------- PROJETOS ---------- */
+#projetos article {
+    background: #202020;
+    border: 1px solid #2c2c2c;
+    border-left: 4px solid #CD201F;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: .75rem;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+
+    
+
+/* ---------- FORMAÇÃO ACADÊMICA ---------- */
+#formacao {
+    background: #181818;
+    border: 1px solid #2c2c2c;
+    margin: 1.5rem 0;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+#formacao ul {
+    max-width: 600px;
+    margin: 1rem auto 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+}
+
+#formacao li {
+    margin: .5rem 0;
+    padding: .5rem .75rem;
+    background-color: rgba(205, 32, 31, .1);
+    border-left: 3px solid #CD201F;
+    border-right: 3px solid #CD201F;
+    border-radius: .5rem;
+}
+
+/* ---------- CONTATO ---------- */
+#contato {
+    background: #181818;
+    border: 1px solid #2c2c2c;
+    margin: 1.5rem 0;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+#contato h2 {
+    margin-bottom: 1rem;
+}
+
+#contato address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+}
+
+#contato address p {
+    margin: 0;
+}
+
+#contato address a {
+    color: #e0e0e0;
+    font-weight: 600;
+    transition: color .25s;
+}
+
+#contato address a:hover {
+    color: #CD201F;
+}
+
+#contato address a::before {
+    color: #CD201F;
+    margin-right: .25rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: rgba(24, 24, 24, 0.5);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid #CD201F;
+}
+
+/* =========================================================
+   BREAKPOINTS PROGRESSIVOS
+   ========================================================= */
+
+@media (min-width: 360px) {
+
+    .btn,
+    button,
+    input[type="submit"] {
+        width: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    nav {
+        gap: 1rem;
+    }
+
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 3rem;
+    }
+}
+

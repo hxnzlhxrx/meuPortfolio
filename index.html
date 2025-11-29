@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Hansel Hernandez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/shortcut.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Hansel Hernandez</h1>
+        <p>Desenvolvedor Mobile e Web | UX/UI Designer | Poliglota</p>
+        <nav>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#formacao">Formação</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- toast de troca de foto -->
+    <div id="toast" class="toast">Foto de perfil atualizada!</div>
+
+    <main>
+        <section id="sobre">
+            <h2>Quem é Hansel?</h2>
+            <div class="about-content">
+                <div class="photo-wrapper">
+                    <img src="./img/Perfil1.png" alt="Foto de Perfil de Hansel Hernandez" class="profile-image" id="fotoPerfil">
+                    <span class="about__badge">
+                        <a href="#" id="refresh__btn">
+                        <img src="./img/refresh.png" alt="icone de refresh" class="badge__image">
+                        </a>
+                    </span>
+                </div>
+        
+                <p>
+                    Sou desenvolvedor mobile e web com alma de designer e mente de engenheiro.
+                    Formado em Engenharia Informática, já construí apps nativos e multiplataforma (Kotlin + Jetpack
+                    Compose, React Native) e sistemas web (React, Node, Next.js) do zero ao deploy — sempre com foco em escalabilidade e
+                    experiência do usuário (UX/UI).
+                    Mas código não é tudo: lidero equipes, facilito workshops e comunico em 4 idiomas (pt, en, es, fr). Se você busca
+                    alguém que transforma ideias em produtos digitais de verdade — e ainda traduz necessidades de negócio em interfaces
+                    que funcionam. entra em contato!
+                </p>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Área</th>
+                            <th>Tecnologias</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mobile Android/iOS</td>
+                            <td>Kotlin, React Native, Jetpack Compose, Firebase, MVVM</td>
+                        </tr>
+                        <tr>
+                            <td>Web Full Stack</td>
+                            <td>HTML5, CSS3, JavaScript, React, Node.js</td>
+                        </tr>
+                        <tr>
+                            <td>UX/UI Design</td>
+                            <td>Figma, Prototipagem, Acessibilidade</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <article>
+                <h3>Sistema de Registro de Ponto com Biometria Facial</h3>
+                <p>React, Node.js, SQLite, FaceAPI.js</p>
+            </article>
+            <article>
+                <h3>App Android Multilingue CheckFlow</h3>
+                <p>Kotlin, Jetpack Compose, Firebase – suporte a 4 idiomas</p>
+            </article>
+            <article>
+                <h3>Plataforma de Recompensas Educativas</h3>
+                <p>HTML, CSS, JavaScript – gamificação para crianças</p>
+            </article>
+        </section>
+
+        <section id="formacao">
+            <h2>Formação Acadêmica</h2>
+            <ul>
+                <li>Desenvolvedor Web Front-End – TOTI, 2025</li>
+                <li>Desenvolvedor Web Front-End – SENAI, 2025</li>
+                <li>Desenvolvedor Android / iOS (React Native) – SENAI, 2025</li>
+                <li>Product Designer / UX/UI Designer – TOTI, 2025</li>
+                <li>Desenvolvedor Android (Kotlin) – TOTI, 2024</li>
+                <li>Desenvolvedor Web Full-Stack – TOTI, 2024</li>
+                <li>Técnico em Eletrônica Aplicada (Apple iOS) – CENDITEC, 2017</li>
+                <li>Técnico em Eletrônica Aplicada (Android Multimarcas) – ServiCell, 2017</li>
+                <li>PNF Engenharia Informática – IUTM, Venezuela, 2013</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Criador de apps mobile & web — ideia na cabeça? App no bolso!</p>
+            <address>
+                <p>Telefone: +55 21 96561-5710</p>
+                <p>Email: <a href="mailto:hanzlhero@gmail.com">hanzlhero@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/hansel-hernandez-34046a84/" target="_blank" rel="noopener noreferrer">
+                    LinkedIn Hansel Hernandez
+                </a></p>
+                <p>GitHub: <a href="https://github.com/hxnzlhxrx" target= "_blank" rel="noopener noreferrer" >Github Hansel Hernandez</a></p>
+                <p>Behanced: <a href="https://www.behance.net/hanselhernandez5" target= "_blank" rel="noopener noreferrer" >Behanced Hansel Hernandez</a></p>
+            </address>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Hansel Hernandez — by <em>_gishikoDev_</em> | “O futuro se programa hoje.”</p>
+    </footer>
+  <script src="mudarImagemPerfil.js"></script>
+</body>
+</html>
