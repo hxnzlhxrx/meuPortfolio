@@ -12,11 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ---------- BODY ---------- */
 body {
     position: relative;
     min-height: 100vh;
-    margin: 0;
     font-family: 'Fredoka', sans-serif;
     line-height: 1.6;
     color: #e0e0e0;
@@ -157,94 +155,88 @@ section {
     text-align: center;
 }
 
-
-
 .about-content p {
     text-align: left;
 }
 
 /* ---------- FOTO DE PERFIL ---------- */
-
 .photo-wrapper {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: 0 auto 1.5rem;
 }
 
 .profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #CD201F;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #CD201F;
 }
 
-/* ---------- BOTÃO MUDAR FOTO DE PERFIL ---------- */
-
+/* ---------- BOTÓN REFRESH ---------- */
 .about__badge {
-  position: absolute;
-  bottom: -10px;
-  right: 110px;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #CD201F;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 50%;
-  border: 2px solid #0e0e0e;
+    position: absolute;
+    bottom: -10px;
+    right: 110px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #CD201F;
+    border-radius: 50%;
+    border: 2px solid #0e0e0e;
 }
 
 .badge__image {
-  width: 85%;
-  height: auto;
-  object-fit: contain;
+    width: 85%;
+    height: auto;
 }
 
 #refresh__btn {
-  all: unset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  transition: transform .25s;
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform .25s;
 }
+
 #refresh__btn:hover {
-  transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 #refresh__btn:active {
-    transform: scale(0.80);
+    transform: scale(0.8);
 }
 
 /* ---------- TOAST ---------- */
 .toast {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(150%);
-  opacity: 0;                       
-  pointer-events: none;             
-  background: #CD201F;
-  color: #fff;
-  padding: .75rem 1.5rem;
-  border-radius: 2rem;
-  font: 600 1rem/1 'Fredoka', sans-serif;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,.35);
-  z-index: 9999;
-  transition: transform .4s ease, opacity .4s ease;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(150%);
+    opacity: 0;
+    pointer-events: none;
+    background: #CD201F;
+    color: #fff;
+    padding: .75rem 1.5rem;
+    border-radius: 2rem;
+    font: 600 1rem/1 'Fredoka', sans-serif;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,.35);
+    z-index: 9999;
+    transition: transform .4s ease, opacity .4s ease;
 }
 
 .toast.show {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
-  pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* ---------- TABELA ---------- */
@@ -254,7 +246,7 @@ table {
     margin-top: 1rem;
 }
 
-th,td {
+th, td {
     padding: .75rem;
     text-align: left;
 }
@@ -270,10 +262,10 @@ td {
 }
 
 .table-wrapper {
-  border-radius: .75rem;
-  overflow: hidden;
-  border: 1px solid #2c2c2c;
-  padding: 0.90rem;
+    border-radius: .75rem;
+    overflow: hidden;
+    border: 1px solid #2c2c2c;
+    padding: 0.90rem;
 }
 
 /* ---------- PROJETOS ---------- */
@@ -287,9 +279,6 @@ td {
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
-
-
-    
 
 /* ---------- FORMAÇÃO ACADÊMICA ---------- */
 #formacao {
@@ -324,10 +313,6 @@ td {
     padding: 2rem 1rem;
     border-radius: 1rem;
     text-align: center;
-}
-
-#contato h2 {
-    margin-bottom: 1rem;
 }
 
 #contato address {
@@ -372,10 +357,7 @@ footer {
    ========================================================= */
 
 @media (min-width: 360px) {
-
-    .btn,
-    button,
-    input[type="submit"] {
+    .btn, button, input[type="submit"] {
         width: auto;
     }
 }
@@ -389,6 +371,11 @@ footer {
         flex-direction: row;
         text-align: left;
     }
+
+    .photo-wrapper {
+        margin: 0 2rem 0 0;
+        flex-shrink: 0;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -400,4 +387,3 @@ footer {
         padding: 3rem;
     }
 }
-
