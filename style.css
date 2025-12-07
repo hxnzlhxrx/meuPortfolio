@@ -190,6 +190,11 @@ section {
     border: 2px solid #0e0e0e;
 }
 
+.about__badge:active {
+    background-color: #4e0b0b;
+    border: solid 2px #e0e0e0;
+}
+
 .badge__image {
     width: 85%;
     height: auto;
@@ -350,6 +355,35 @@ footer {
     padding: 2rem 1rem;
     margin-top: 2rem;
     border-top: 2px solid #CD201F;
+}
+
+/* ---------- HOVER NAS SECTIONS SEM COLLAPSE ---------- */
+#projetos,
+#habilidades,
+#contato {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projetos:hover,
+#habilidades:hover,
+#contato:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(205, 32, 31, 0.35);
+}
+
+/* ---------- SECTIONS COM COLLAPSE ---------- */
+section:not(#sobre):not(#projetos):not(#habilidades):not(#contato) {
+  position: relative;
+  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: pointer;
+}
+
+section:not(#sobre):not(#projetos):not(#habilidades):not(#contato):hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 8px 2px #ffffff,
+    0 0 16px 4px rgba(255, 255, 255, 0.6),
+    0 0 24px 6px rgba(255, 255, 255, 0.1);
 }
 
 /* =========================================================
