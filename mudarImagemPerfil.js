@@ -1,3 +1,5 @@
+// Hansel Hernandez - _gishikoDev - Turma 55 Front-End
+
 const pictures = [
   './img/Perfil1.png',
   './img/Perfil2.png',

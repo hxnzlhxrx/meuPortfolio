@@ -1,3 +1,5 @@
+/* Hansel Hernandez - _gishikoDev - Turma 55 Front-End */
+
 /* ---------- RESET ---------- */
 *,
 *::before,
@@ -381,9 +383,30 @@ section:not(#sobre):not(#projetos):not(#habilidades):not(#contato) {
 section:not(#sobre):not(#projetos):not(#habilidades):not(#contato):hover {
   transform: translateY(-3px);
   box-shadow:
-    0 0 8px 2px #ffffff,
     0 0 16px 4px rgba(255, 255, 255, 0.6),
     0 0 24px 6px rgba(255, 255, 255, 0.1);
+}
+
+section:not(#sobre):not(#projetos):not(#habilidades):not(#contato) h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-right: 2rem;
+}
+
+section:not(#sobre):not(#projetos):not(#habilidades):not(#contato) h2::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  font-size: 1rem;
+  color: #CD201F;
+  transition: transform 0.3s ease;
+  align-self: center;
+}
+
+section:not(#sobre):not(#projetos):not(#habilidades):not(#contato) h2.active::after {
+  transform: rotate(180deg);
 }
 
 /* =========================================================
